@@ -1,0 +1,35 @@
+{
+  "name": "eventbrite-sdk",
+  "version": "1.0.0",
+  "description": "Unofficial SDK for Eventbrite API",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agurz/Eventbrite-SDK.git"
+  },
+  "keywords": [
+    "eventbrite",
+    "javascript",
+    "node",
+    "sdk"
+  ],
+  "author": "Agustín Rodríguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agurz/Eventbrite-SDK/issues"
+  },
+  "homepage": "https://github.com/agurz/Eventbrite-SDK#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "datejs": "^1.0.0-rc3",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "qs": "^6.4.0",
+    "request": "^2.79.0"
+  }
+}
