@@ -15,7 +15,7 @@ module.exports = {
                 for (var i in res.events) {
                     events.push(res.events[i].event);
                 };
-
+                
                 cb(null, events);
             }
         });
@@ -23,7 +23,12 @@ module.exports = {
 
     get: function(id, cb) {
         api.restAPICall('POST', entityPath + '_get', { id: id }, function(err, res) {
-            cb(err, res);
+            if (err) {
+                cb(err, null);
+            }
+            else {
+                cb(null, res.event);
+            }
         });
     },
     

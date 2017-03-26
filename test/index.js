@@ -19,6 +19,16 @@ describe('event', function() {
         Eventbrite.event.all(function(err, events) {
             expect(err).to.be.null;
             expect(events).to.be.a('array');
+            expect(events[0].id).to.be.a('number');
+            done();
+        });
+    });
+
+    it('get', function(done) {
+        Eventbrite.event.get(24706151765, function(err, event) {
+            expect(err).to.be.null;
+            expect(event).to.be.a('object');
+            expect(event.id).to.be.a('number');
             done();
         });
     });
