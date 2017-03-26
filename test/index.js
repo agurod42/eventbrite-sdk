@@ -13,6 +13,21 @@ Eventbrite.configure({
     organizerId: process.env.EVENTBRITE_ORGANIZER_ID
 });
 
+describe('organizer', function () {
+
+    this.timeout(4000);
+    
+    it('events', function (done) {
+        Eventbrite.organizer.events(function (err, events) {
+            expect(err).to.be.null;
+            expect(events).to.be.a('array');
+            expect(events[0].id).to.be.a('number');
+            done();
+        });
+    });
+
+});
+
 describe('event', function () {
 
     this.timeout(4000);

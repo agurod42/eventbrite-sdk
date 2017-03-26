@@ -24,7 +24,7 @@ module.exports = {
     attendee: require('./entity/attendee'),
     event: require('./entity/event'),
     order: null,
-    organizer: null,
+    organizer: require('./entity/organizer'),
     user: null,
 
     version: '1.0',
