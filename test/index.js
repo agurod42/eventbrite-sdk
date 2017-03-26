@@ -35,4 +35,15 @@ describe('event', function () {
         });
     });
 
+    it('attendees', function (done) {
+        Eventbrite.event.get(EVENT_ID, function (err, event) {
+            event.attendees(function (err, attendees) {
+                expect(err).to.be.null;
+                expect(attendees).to.be.a('array');
+                expect(attendees[0].id).to.be.a('number');
+                done();
+            });
+        });
+    });
+
 });

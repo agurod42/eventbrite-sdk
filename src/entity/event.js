@@ -1,4 +1,5 @@
 var api = require('../api');
+var Attendee = require('../entity/attendee');
 
 const ENTITY_PATH = '/event';
 

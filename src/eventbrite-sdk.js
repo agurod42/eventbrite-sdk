@@ -13,10 +13,13 @@ module.exports = {
         api.configure(options);
     },
     configuration: api.configuration,
+
+    attendee: require('./entity/attendee'),
     event: require('./entity/event'),
     order: null,
     organizer: null,
     user: null,
+    
     version: '1.0',
 
     // getters
