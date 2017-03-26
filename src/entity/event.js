@@ -20,8 +20,8 @@ Event.prototype.attendees = function(cb) {
             var attendees = [];
 
             for (var i in res.attendees) {
-                var event = new Attendee(res.attendees[i].attendee);
-                attendees.push(event);
+                var attendee = new Attendee(res.attendees[i].attendee);
+                attendees.push(attendee);
             };
             
             cb(null, attendees);
