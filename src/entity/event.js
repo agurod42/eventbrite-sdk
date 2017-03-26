@@ -5,7 +5,7 @@ const entityPath = '/event';
 module.exports = {
 
     all: function(cb) {
-        api.restAPICall('GET', '/organizer_list_events', { id: require('../eventbrite-sdk').getOrganizerId() }, function(err, res) {
+        api.restAPICall('POST', '/organizer_list_events', { id: require('../eventbrite-sdk').getOrganizerId() }, function(err, res) {
             if (err) {
                 cb(err, null);
             }
