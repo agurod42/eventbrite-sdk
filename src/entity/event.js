@@ -1,6 +1,6 @@
 var api = require('../api');
 
-const entityPath = '/event';
+const ENTITY_PATH = '/event';
 
 function Event(data) {
     for (var i in data) {
@@ -11,8 +11,20 @@ function Event(data) {
 // class methods
 
 Event.prototype.attendees = function(cb) {
-    api.restAPICall('POST', entityPath + '_list_attendees', { id: this.id }, function (err, res) {
+    api.restAPICall('POST', ENTITY_PATH + '_list_attendees', { id: this.id }, function (err, res) {
+        if (err) {
+            cb(err, null);
+        }
+        else {
+            var attendees = [];
 
+            for (var i in res.attendees) {
+                var event = new Attendee(res.attendees[i].attendee);
+                attendees.push(event);
+            };
+            
+            cb(null, attendees);
+        }
     });
 };
 
@@ -37,7 +49,7 @@ Event.all = function(cb) {
 };
 
 Event.get = function(id, cb) {
-    api.restAPICall('POST', entityPath + '_get', { id: id }, function (err, res) {
+    api.restAPICall('POST', ENTITY_PATH + '_get', { id: id }, function (err, res) {
         if (err) {
             cb(err, null);
         }
