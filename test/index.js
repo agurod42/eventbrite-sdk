@@ -15,7 +15,7 @@ describe('event', function() {
 
     this.timeout(4000);
 
-    it('get', function(done) {
+    it('all', function(done) {
         Eventbrite.event.all(function(err, events) {
             expect(err).to.be.null;
             expect(events).to.be.a('array');
