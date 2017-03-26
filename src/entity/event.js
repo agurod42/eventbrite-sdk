@@ -32,7 +32,7 @@ Event.prototype.attendees = function(cb) {
 // static methods
 
 Event.all = function(cb) {
-    api.restAPICall('POST', '/organizer_list_events', { id: require('../eventbrite-sdk').getOrganizerId() }, function (err, res) {
+    api.restAPICall('POST', '/organizer_list_events', { id: require('../eventbrite-sdk').configuration('organizerId') }, function (err, res) {
         if (err) {
             cb(err, null);
         }
