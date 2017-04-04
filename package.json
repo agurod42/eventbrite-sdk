@@ -1,6 +1,6 @@
 {
   "name": "eventbrite-sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Unofficial SDK for Eventbrite API",
   "main": "index.js",
   "scripts": {

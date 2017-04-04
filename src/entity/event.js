@@ -12,7 +12,7 @@ function Event(data) {
 // class methods
 
 Event.prototype.attendees = function(cb) {
-    api.restAPICall('POST', ENTITY_PATH + '_list_attendees', { id: this.id }, function (err, res) {
+    api.restAPICall('POST', ENTITY_PATH + '_list_attendees', { id: this.id, show_full_barcodes: true }, function (err, res) {
         if (err) {
             cb(err, null);
         }
