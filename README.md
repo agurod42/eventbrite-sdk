@@ -8,8 +8,10 @@ Unofficial SDK for Eventbrite API written in JavaScript for NodeJS
 
 1. Install
 
+    ```
     npm install eventbrite-sdk --save
-
+    ```
+    
 2. Require `eventbrite-sdk` in your file
 
     ```javascript
