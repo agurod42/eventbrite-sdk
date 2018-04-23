@@ -2,7 +2,7 @@
 
 Unofficial SDK for Eventbrite API written in JavaScript for NodeJS
 
-[![Build Status](https://travis-ci.org/agurz/eventbrite-sdk.svg?branch=master)](https://travis-ci.org/agurz/eventbrite-sdk)
+[![Build Status](https://travis-ci.org/agurodriguez/eventbrite-sdk.svg?branch=master)](https://travis-ci.org/agurodriguez/eventbrite-sdk)
 
 ## Getting Started
 
